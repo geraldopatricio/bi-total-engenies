@@ -38,3 +38,4 @@ __screenshots__/
 
 .env
 .env.*
+.env.local
