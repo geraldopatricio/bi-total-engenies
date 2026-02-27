@@ -1,0 +1,115 @@
+// 1. Variáveis de Cor
+$primary: #f97316;
+$secondary: #6c757d;
+$success: #22c55e;
+$danger: #ef4444;
+$warning: #eab308;
+$info: #3b82f6;
+$light: #f3f4f6;
+$dark: #1f2937;
+
+$border-radius: 0.75rem; 
+
+// Importar Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+body {
+  background-color: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Evita scroll lateral na animação */
+}
+
+// Cores Subtis
+.bg-orange-subtle { background-color: #ffedd5 !important; color: #ea580c; }
+.bg-blue-subtle { background-color: #eff6ff !important; color: #3b82f6; }
+.bg-green-subtle { background-color: #f0fdf4 !important; color: #16a34a; }
+.bg-red-subtle { background-color: #fef2f2 !important; color: #dc2626; }
+
+// --- ESTRUTURA RESPONSIVA ---
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  position: relative;
+}
+
+#sidebar {
+  min-width: 260px;
+  max-width: 260px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #dee2e6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050; /* Acima do conteúdo */
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+#content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  
+  // No Desktop (telas grandes)
+  @media (min-width: 769px) {
+    margin-left: 260px;
+  }
+  
+  // No Mobile (telas pequenas)
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+// --- REGRAS ESPECÍFICAS MOBILE ---
+
+@media (max-width: 768px) {
+  // Esconde a sidebar jogando-a para a esquerda
+  #sidebar {
+    left: -260px;
+  }
+
+  // Classe para MOSTRAR a sidebar (adicionada via Vue)
+  #sidebar.active {
+    left: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  // Fundo escuro quando o menu abre
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040; // Abaixo da sidebar, acima do conteudo
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+}
+
+// Links do Menu
+.nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0.5rem;
+  margin-bottom: 0.25rem;
+  
+  &:hover { background-color: #f8f9fa; color: #212529; }
+  &.active { background-color: #fff7ed; color: $primary; }
+}
+
+.avatar { width: 40px; height: 40px; object-fit: cover; border-radius: 50%; }

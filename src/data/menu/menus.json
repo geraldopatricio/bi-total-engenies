@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "Dashboard",
+    "icone": "LayoutDashboard",
+    "rota": null,
+    "pai_id": null,
+    "ordem": 1,
+    "tipo": "grupo",
+    "submenus": [
+      { "id": 2, "titulo": "Regiao", "rota": "/", "ordem": 1 }
+    ]
+  },
+  {
+    "id": 20,
+    "titulo": "Ferramentas",
+    "icone": null,
+    "rota": null,
+    "pai_id": null,
+    "ordem": 4,
+    "tipo": "separador"
+  },
+  {
+    "id": 21,
+    "titulo": "LubChat",
+    "icone": "MessageSquare",
+    "rota": "/lubchat",
+    "pai_id": null,
+    "ordem": 5,
+    "tipo": "link"
+  },
+  {
+    "id": 22,
+    "titulo": "Configurações",
+    "icone": null,
+    "rota": null,
+    "pai_id": null,
+    "ordem": 6,
+    "tipo": "separador"
+  },
+  {
+    "id": 24,
+    "titulo": "Menus",
+    "icone": "Settings",
+    "rota": "/configuracoes/menus",
+    "pai_id": null,
+    "ordem": 8,
+    "tipo": "link"
+  }
+]
