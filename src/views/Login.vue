@@ -73,7 +73,7 @@ const handleLogin = async () => {
       showToast(`Bem-vindo, ${usuarioEncontrado.nome}!`, 'success');
       
       setTimeout(() => {
-        router.push('/dashboards/frota');
+        router.push('/dashboards/frotas');
       }, 800);
 
     } else {
