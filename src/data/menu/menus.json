@@ -40,7 +40,7 @@
   },
   {
     "id": 24,
-    "titulo": "Acesso",
+    "titulo": "Usuários",
     "icone": "Settings",
     "rota": "/cadastros/acesso",
     "pai_id": null,
