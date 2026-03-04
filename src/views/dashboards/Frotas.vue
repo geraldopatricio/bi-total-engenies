@@ -24,16 +24,6 @@ const handleLoad = () => {
         </div>
       </div>
       
-      <div class="d-flex gap-2">
-        <!-- Atualizado para o link correto do BI Frotas -->
-        <a 
-          href="https://app.powerbi.com/view?r=eyJrIjoiMjMyNzUwMzgtMjcwMi00ZjU2LTg4YjAtMzc2M2IzMTI5OWUxIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" 
-          target="_blank" 
-          class="btn btn-orange-outline btn-sm d-flex align-items-center gap-2 px-3 fw-bold"
-        >
-          <ExternalLink :size="16"/> Ver em Tela Cheia
-        </a>
-      </div>
     </div>
 
     <!-- ÁREA DO POWER BI -->
