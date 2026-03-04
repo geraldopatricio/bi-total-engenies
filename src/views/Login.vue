@@ -4,7 +4,7 @@ import { ref } from 'vue';
 import { Eye, EyeOff, AlertTriangle, CheckCircle, X, Mail } from 'lucide-vue-next';
 
 // IMPORTAÇÃO DA "BASE DE DADOS"
-import usuariosDB from '@/database/acesso.json';
+import usuariosDB from '@/data/acesso.json';
 
 const router = useRouter();
 
