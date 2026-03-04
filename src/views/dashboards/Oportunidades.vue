@@ -23,7 +23,6 @@ const handleLoad = () => {
           <p class="text-muted small mb-0">Análise Estratégica - TotalEnergies</p>
         </div>
       </div>
-      
     </div>
 
     <!-- ÁREA DO POWER BI -->
