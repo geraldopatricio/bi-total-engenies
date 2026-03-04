@@ -80,7 +80,7 @@ onMounted(() => {
       <div class="p-1 d-flex align-items-center justify-content-center me-2" style="width: 32px; height: 32px; font-weight: bold;">
         <img src="/log-01.png" alt="Logo" style="width: 32px; height: 32px;">
       </div>
-      <img src="/Lubx_black.png" alt="Logo" style="width: 150px; height: 20px;">
+      <img src="/Lubx_black.png" alt="Logo" style="width: 150px; height: 32px;">
     </div>
 
     <div class="flex-grow-1 overflow-auto hide-scrollbar">
