@@ -20,20 +20,11 @@ const handleLoad = () => {
         </div>
         <div>
           <h4 class="fw-bold m-0 text-dark">BI IBP</h4>
-          <p class="text-muted small mb-0">Análise Estratégica - Total Energies</p>
+          <p class="text-muted small mb-0">Análise Estratégica - TotalEnergies</p>
         </div>
       </div>
       
-      <div class="d-flex gap-2">
-        <!-- Atualizei o link aqui também para o link do IBP caso queira abrir em tela cheia -->
-        <a 
-          href="https://app.powerbi.com/view?r=eyJrIjoiOGMwNjllODItNDAxYy00ODEzLWE0YTUtODQ2YTk3NGE0NTllIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" 
-          target="_blank" 
-          class="btn btn-orange-outline btn-sm d-flex align-items-center gap-2 px-3 fw-bold"
-        >
-          <ExternalLink :size="16"/> Ver em Tela Cheia
-        </a>
-      </div>
+      
     </div>
 
     <!-- ÁREA DO POWER BI -->
