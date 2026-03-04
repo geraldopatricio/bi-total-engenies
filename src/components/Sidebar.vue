@@ -78,9 +78,9 @@ onMounted(() => {
   <nav class="d-flex flex-column p-3 h-100">
     <div class="d-flex align-items-center mb-4 px-2 mt-2">
       <div class="p-1 d-flex align-items-center justify-content-center me-2" style="width: 32px; height: 32px; font-weight: bold;">
-        <img src="/log-01.png" alt="Logo" style="width: 32px; height: 32px;">
+        
       </div>
-      <img src="/Lubx_black.png" alt="Logo" style="width: 150px; height: 32px;">
+      <img src="/Lubx_01.png" alt="Logo" style="width: 150px; height: 32px;">
     </div>
 
     <div class="flex-grow-1 overflow-auto hide-scrollbar">
