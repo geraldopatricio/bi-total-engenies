@@ -45,14 +45,7 @@ const handleLoad = () => {
           <span class="mt-2 fw-bold text-muted">Carregando Relatório...</span>
         </div>
 
-        <iframe 
-          title="IBP" 
-          width="1024" 
-          height="1060" 
-          src="https://app.powerbi.com/view?r=eyJrIjoiOGMwNjllODItNDAxYy00ODEzLWE0YTUtODQ2YTk3NGE0NTllIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" 
-          frameborder="0" 
-          allowFullScreen="true"
-        ></iframe>
+        <iframe title="IBP" width="1024" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiOGMwNjllODItNDAxYy00ODEzLWE0YTUtODQ2YTk3NGE0NTllIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" frameborder="0" allowFullScreen="true"></iframe>
       </div>
     </div>
   </div>
