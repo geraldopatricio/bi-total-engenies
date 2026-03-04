@@ -48,7 +48,7 @@ onMounted(() => {
     </button>
 
     <div class="d-flex flex-column">
-      <h5 class="fw-bold m-0 text-dark" style="font-size: 1.1rem;">BUSINESS INTELLIGENCE - TOTAL ENERGIES</h5>
+      <h5 class="fw-bold m-0 text-dark" style="font-size: 1.1rem;">BUSINESS INTELLIGENCE - TOTALENERGIES</h5>
       <small class="text-muted d-none d-sm-block">Sistema de Gestão Automotiva da LubConsulta</small>
     </div>
 
