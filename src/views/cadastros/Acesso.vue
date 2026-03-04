@@ -7,7 +7,7 @@ import {
 } from 'lucide-vue-next';
 
 // Importação da "base de dados" inicial
-import usuariosIniciais from '@/database/acesso.json';
+import usuariosIniciais from '@/data/acesso.json';
 
 // === ESTADOS ===
 const users = ref([]);
