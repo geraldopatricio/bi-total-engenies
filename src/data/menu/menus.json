@@ -8,7 +8,6 @@
     "ordem": 1,
     "tipo": "grupo",
     "submenus": [
-      { "id": 2, "titulo": "Regiao - v.2", "rota": "/", "ordem": 1 },
       { "id": 3, "titulo": "Região", "rota": "/dashboards/frotas", "ordem": 1 },
       { "id": 4, "titulo": "IBP", "rota": "/dashboards/ibp", "ordem": 1 },
       { "id": 5, "titulo": "Oportunidades", "rota": "/dashboards/oportunidades", "ordem": 1 }
