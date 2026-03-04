@@ -121,71 +121,7 @@ const resetChat = () => {
       </button>
     </div>
 
-    <!-- === JANELA DO CHAT === -->
-    <transition name="slide-up">
-      <div v-if="isOpen" class="chat-window shadow-lg">
-        
-        <!-- HEADER -->
-        <div class="chat-header d-flex align-items-center justify-content-between p-3 text-white">
-          <div class="d-flex align-items-center gap-2">
-            <div class="avatar bg-white text-orange rounded-circle d-flex align-items-center justify-content-center">
-              <User size="16" :color="primaryColor" />
-            </div>
-            <div class="d-flex flex-column text-start">
-              <span class="fw-bold" style="font-size: 0.9rem;">Atendente Virtual</span>
-              <small style="font-size: 0.7rem; opacity: 0.9;">Online agora</small>
-            </div>
-          </div>
-          <button @click="toggleChat" class="btn btn-sm text-white p-0"><X size="20"/></button>
-        </div>
-
-        <!-- BODY (MENSAGENS) -->
-        <div class="chat-body p-3" ref="chatBody">
-          <div v-for="msg in messages" :key="msg.id" class="mb-3 d-flex flex-column" :class="msg.isUser ? 'align-items-end' : 'align-items-start'">
-            
-            <!-- Balão de Texto -->
-            <div class="message-bubble p-2 px-3 shadow-sm" 
-                 :class="msg.isUser ? 'user-msg text-white' : 'bot-msg text-dark bg-light'">
-              {{ msg.text }}
-            </div>
-
-            <!-- Opções de Menu (Se houver) -->
-            <div v-if="msg.type === 'menu'" class="mt-2 d-flex flex-column gap-2 w-75">
-              <button v-for="opt in msg.options" :key="opt.id" 
-                      @click="handleOptionClick(opt.id)"
-                      class="btn btn-sm btn-outline-primary text-start d-flex align-items-center justify-content-between bg-white">
-                {{ opt.id }} - {{ opt.label }}
-                <ChevronRight size="14" />
-              </button>
-            </div>
-
-            <!-- Link (Se houver) -->
-            <div v-if="msg.type === 'link'" class="mt-2">
-              <a :href="msg.options.url" target="_blank" class="btn btn-sm btn-primary text-white d-flex align-items-center gap-2" @click="resetChat">
-                <ExternalLink size="14" /> {{ msg.options.label }}
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- FOOTER (INPUT) -->
-        <div class="chat-footer p-2 border-top bg-white d-flex gap-2">
-          <input 
-            v-model="inputValue" 
-            @keyup.enter="handleSend"
-            :disabled="step === 'SHOW_MENU' || step === 'SHOW_LINK'"
-            type="text" 
-            class="form-control form-control-sm border-0 bg-light" 
-            :placeholder="step === 'ASK_NAME' ? 'Digite seu nome...' : 'Escolha uma opção acima...'"
-          >
-          <button @click="handleSend" :disabled="!inputValue" class="btn btn-sm btn-primary d-flex align-items-center justify-content-center" style="width: 40px;">
-            <Send size="16" />
-          </button>
-        </div>
-
-      </div>
-    </transition>
+    
 
   </footer>
 </template>
