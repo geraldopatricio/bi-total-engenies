@@ -40,9 +40,9 @@
   },
   {
     "id": 24,
-    "titulo": "Menus",
+    "titulo": "Acesso",
     "icone": "Settings",
-    "rota": "/configuracoes/menus",
+    "rota": "/cadastros/acesso",
     "pai_id": null,
     "ordem": 8,
     "tipo": "link"
