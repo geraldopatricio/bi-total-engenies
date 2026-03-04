@@ -9,7 +9,7 @@
     "tipo": "grupo",
     "submenus": [
       { "id": 2, "titulo": "Região", "rota": "/dashboards/frotas", "ordem": 1 },
-      { "id": 3, "titulo": "Oportunidades", "rota": "/dashboards/oportunidades", "ordem": 1 }
+      { "id": 3, "titulo": "Oportunidades", "rota": "/dashboards/oportunidades", "ordem": 1 },
       { "id": 4, "titulo": "IBP", "rota": "/dashboards/ibp", "ordem": 1 }
     ]
   },
