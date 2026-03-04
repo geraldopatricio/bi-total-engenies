@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nome": "Administrador Total",
+    "email": "admin@total.com",
+    "senha": "123",
+    "telefone": "11999999999",
+    "tipo": "admin",
+    "status": "ativo"
+  },
+  {
+    "id": 2,
+    "nome": "Edimilson Junior",
+    "email": "edimilsonjunior@vibraenergia.com.br",
+    "senha": "Total@2026",
+    "telefone": "11988888888",
+    "tipo": "usuario",
+    "status": "ativo"
+  },
+  {
+    "id": 3,
+    "nome": "Usuario Teste",
+    "email": "teste@gmail.com",
+    "senha": "123",
+    "telefone": "11977777777",
+    "tipo": "usuario",
+    "status": "ativo"
+  }
+]
