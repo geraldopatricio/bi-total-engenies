@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { Globe, LayoutDashboard, ExternalLink } from 'lucide-vue-next';
 
-// Estado para controle de carregamento, caso queira futuramente
+// Estado para controle de carregamento
 const isLoading = ref(true);
 
 const handleLoad = () => {
@@ -25,8 +25,9 @@ const handleLoad = () => {
       </div>
       
       <div class="d-flex gap-2">
+        <!-- Atualizei o link aqui também para o link do IBP caso queira abrir em tela cheia -->
         <a 
-          href="https://app.powerbi.com/view?r=eyJrIjoiMzM5NWYxZmEtMmFkYS00MjE1LTlmZWYtZTI5NGY4ZjA5ZmUyIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" 
+          href="https://app.powerbi.com/view?r=eyJrIjoiOGMwNjllODItNDAxYy00ODEzLWE0YTUtODQ2YTk3NGE0NTllIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" 
           target="_blank" 
           class="btn btn-orange-outline btn-sm d-flex align-items-center gap-2 px-3 fw-bold"
         >
@@ -39,19 +40,28 @@ const handleLoad = () => {
     <div class="iframe-wrapper p-3">
       <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100 position-relative">
         
-        <!-- Spinner de carregamento (Opcional) -->
+        <!-- Spinner de carregamento -->
         <div v-if="isLoading" class="loader-overlay">
           <div class="spinner-border text-orange" role="status"></div>
           <span class="mt-2 fw-bold text-muted">Carregando Relatório...</span>
         </div>
 
-        <iframe title="IBP" width="1024" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiOGMwNjllODItNDAxYy00ODEzLWE0YTUtODQ2YTk3NGE0NTllIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <!-- CORREÇÃO AQUI: Adicionado @load e class -->
+        <iframe 
+          title="IBP" 
+          class="powerbi-iframe"
+          src="https://app.powerbi.com/view?r=eyJrIjoiOGMwNjllODItNDAxYy00ODEzLWE0YTUtODQ2YTk3NGE0NTllIiwidCI6ImEzYTY5ODI1LTA2YTMtNDU0Ny1iZGZkLTBlYWI3MDJmMTcyNiJ9" 
+          frameborder="0" 
+          allowFullScreen="true"
+          @load="handleLoad" 
+        ></iframe>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+/* O CSS permanece o mesmo do anterior */
 .dashboard-container {
   background-color: #f1f5f9;
   height: 100vh;
@@ -74,55 +84,29 @@ const handleLoad = () => {
   border-radius: 12px;
 }
 
-/* CORES E ESTILOS ORIGINAIS */
 .text-orange { color: #e97332 !important; }
 .icon-circle-bg { 
-  width: 45px; 
-  height: 45px; 
-  border-radius: 50%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  width: 45px; height: 45px; border-radius: 50%; 
+  display: flex; align-items: center; justify-content: center; 
   background: #fff1eb; 
 }
 
 .btn-orange-outline { 
-  border: 2px solid #e97332; 
-  color: #e97332; 
-  background: white; 
-  transition: 0.3s; 
-  text-decoration: none;
-  border-radius: 8px;
+  border: 2px solid #e97332; color: #e97332; background: white; 
+  transition: 0.3s; text-decoration: none; border-radius: 8px;
 }
 
-.btn-orange-outline:hover { 
-  background: #fff1eb; 
-  color: #d15f22;
-}
+.btn-orange-outline:hover { background: #fff1eb; color: #d15f22; }
 
-/* OVERLAY DE CARREGAMENTO */
 .loader-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: white; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; z-index: 10;
 }
 
-.spinner-border.text-orange {
-  color: #e97332 !important;
-}
+.spinner-border.text-orange { color: #e97332 !important; }
 
-/* AJUSTE PARA MOBILE */
 @media (max-width: 768px) {
-  .powerbi-iframe {
-    height: calc(100vh - 150px);
-  }
+  .powerbi-iframe { height: calc(100vh - 150px); }
 }
 </style>
