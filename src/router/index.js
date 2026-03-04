@@ -6,6 +6,7 @@ import Login from '../views/Login.vue'
 
 // NOVOS CADASTROS
 import Usuarios from '../views/cadastros/Usuarios.vue'; 
+import Acesso from '../views/cadastros/Acesso.vue'; 
 import ResetPassword from '../views/ResetPassword.vue'; 
 import LubChat from '../views/LubChat.vue';
 import MenusPage from '../views/configuracoes/MenusPage.vue'; 
@@ -42,6 +43,7 @@ const router = createRouter({
     
     // NOVAS ROTAS DE CADASTRO (CRUD)
     { path: '/cadastros/usuarios', name: 'usuarios', component: Usuarios, meta: { requiresLayout: true } }, 
+    { path: '/cadastros/acesso', name: 'acesso', component: Acesso, meta: { requiresLayout: true } }, 
     { path: '/lubchat', name: 'lubchat', component: LubChat, meta: { requiresLayout: true } }
 
   ]
