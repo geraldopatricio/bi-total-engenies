@@ -120,7 +120,7 @@ const openForgotModal = () => { showForgotModal.value = true; };
         
         <div class="text-center mb-4">
           <div class="p-2 d-inline-flex align-items-center justify-content-center mb-3">
-            <img src="/Lubx_01.png" alt="Logo" style="width: 150px; height: 62px;">
+            <img src="/Lubx_01.png" alt="Logo" style="width: 200px; height: 52px;">
           </div>
           <h4 class="fw-bold text-dark">Área de Acesso</h4>
           <p class="text-muted small">BUSINESS INTELLIGENCE - TOTAL ENERGIES</p>
