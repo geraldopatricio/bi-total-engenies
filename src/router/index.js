@@ -4,7 +4,10 @@ import Login from '../views/Login.vue'
 
 // Importar as novas telas
 import Usuarios from '../views/cadastros/Usuarios.vue'; 
-import Acesso from '../views/cadastros/Acesso.vue';  // Certifique-se que o arquivo está em views/cadastros/Acesso.vue
+import Acesso from '../views/cadastros/Acesso.vue';  
+import Frotas from '../views/dashboards/Frotas.vue';  
+import Ibp from '../views/dashboards/Ibp.vue';  
+import Oportunidades from '../views/dashboards/Oportunidades.vue';  
 import ResetPassword from '../views/ResetPassword.vue'; 
 import LubChat from '../views/LubChat.vue';
 import MenusPage from '../views/configuracoes/MenusPage.vue'; 
@@ -49,7 +52,25 @@ const router = createRouter({
       name: 'acesso', 
       component: Acesso, 
       meta: { requiresLayout: true } 
-    }, // Corrigido de () para {}
+    }, 
+    { 
+      path: '/dashboards/frotas', 
+      name: 'frotas', 
+      component: Frotas, 
+      meta: { requiresLayout: true } 
+    }, 
+    { 
+      path: '/dashboards/ibp', 
+      name: 'ibp', 
+      component: Ibp, 
+      meta: { requiresLayout: true } 
+    }, 
+    { 
+      path: '/dashboards/oportunidades', 
+      name: 'oportunidades', 
+      component: Oportunidades, 
+      meta: { requiresLayout: true } 
+    }, 
     { 
       path: '/lubchat', 
       name: 'lubchat', 
