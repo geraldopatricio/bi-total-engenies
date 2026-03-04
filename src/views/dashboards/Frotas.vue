@@ -20,7 +20,7 @@ const handleLoad = () => {
         </div>
         <div>
           <h4 class="fw-bold m-0 text-dark">BI Região</h4>
-          <p class="text-muted small mb-0">Análise Estratégica - Total Energies</p>
+          <p class="text-muted small mb-0">Análise Estratégica - TotalEnergies</p>
         </div>
       </div>
       
